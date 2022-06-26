@@ -1,14 +1,14 @@
 import {
-    Body,
-    Controller,
-    Get,
-    HttpException,
-    HttpStatus,
-    Post,
-    Query
+  Body,
+  Controller,
+  Get,
+  HttpException,
+  HttpStatus,
+  Post,
+  Query
 } from '@nestjs/common';
 import { ApiQuery, ApiTags } from '@nestjs/swagger';
-import { CreateProductDto, UserRole } from './dto/create-product.dto';
+import { CreateProductDto, UserRole } from '../../dto/create-product.dto';
 import { ProductService } from './product.service';
 
 @ApiTags('Product API')
