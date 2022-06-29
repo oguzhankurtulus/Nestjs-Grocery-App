@@ -3,8 +3,8 @@ import { WarehouseController } from './warehouse.controller';
 import { WarehouseService } from './warehouse.service';
 
 @Module({
-  imports: [],
   controllers: [WarehouseController],
   providers: [WarehouseService],
+  exports: [WarehouseService],
 })
 export class WarehouseModule {}

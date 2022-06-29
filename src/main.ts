@@ -9,7 +9,6 @@ async function bootstrap() {
     .setTitle('Grocey API')
     .setDescription('Grocery API backend')
     .setVersion('1.0')
-    // .addTag('grocery')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);

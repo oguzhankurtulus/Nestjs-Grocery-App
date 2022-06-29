@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post, Query } from '@nestjs/common';
+import { Body, Controller, Post } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
 import { WarehouseCreateDto } from '../../dto/warehouse.dto';
 import { WarehouseService } from './warehouse.service';
@@ -11,10 +11,5 @@ export class WarehouseController {
   @Post()
   createNew(@Body() warehouseCreateDto: WarehouseCreateDto) {
     return this.warehouseService.createNewWarehouse(warehouseCreateDto);
-  }
-
-  @Get()
-  async findAll(@Query('type') type: number): Promise<Array<string>> {
-    return this.warehouseService.findAll(type);
   }
 }
